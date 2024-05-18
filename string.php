@@ -3,7 +3,7 @@ function countVowels($string)
 {
     // Count vowels in the string
     $count = 0;
-    $vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+    $vowels = ['a', 'e', 'i', 'o', 'u'];
     for ($i = 0; $i < strlen($string); $i++) {
         if (in_array($string[$i], $vowels)) {
             $count++;
@@ -12,12 +12,10 @@ function countVowels($string)
     return $count;
 }
 
-
-
 // Array of strings
 $strings = ["Hello", "World", "PHP", "Programming"];
 
-// Iterate over each string in the array
+// loop through each string
 foreach ($strings as $x) {
     // Count the number of vowels
     $vowelCount = countVowels($x);
@@ -25,6 +23,6 @@ foreach ($strings as $x) {
     // Reverse the string
     $reversedString = strrev($x);
 
-    // Print the original string, vowel count, and reversed string
-    echo "Original String: $string, Vowel Count: $vowelCount, Reversed String: $reversedString\n";
+    // Show output
+    echo "Original String: $x, Vowel Count: $vowelCount, Reversed String: $reversedString\n";
 }
